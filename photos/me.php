@@ -1,6 +1,6 @@
 <?php require_once('../header.php');
-$photos = $db->query('SELECT u.nom as username, p.* FROM photos p JOIN users u ON p.user_id = u.id');
-$photos->execute(); ?>
+$photos = $db->prepare('SELECT u.nom as username, p.* FROM photos p JOIN users u ON p.user_id = u.id WHERE u.id = ?');
+$photos->execute([sess_get('uid')]); ?>
 <table>
 	<?php while ($photo = $photos->fetch()): ?>
 		<tr>

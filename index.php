@@ -1,4 +1,3 @@
-<?php require_once('boot.php');
-if ($_SESSION['logged'] == TRUE) {
-echo 'rak m3ana';
-} else { echo 'madakhelch m3ana'; }
+<?php require_once('header.php');?>
+
+<?php require_once('footer.php');
