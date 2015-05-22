@@ -6,7 +6,7 @@
 	</div>
 	<div class=form-group>
 		<label for='pass'>Mot de passe</label>
-		<input class=form-control id=pass name=pass>
+		<input class=form-control id=pass name=pass type=password>
 	</div>
 	<button type=submit class='btn'>Se connecter</button>
 </form>

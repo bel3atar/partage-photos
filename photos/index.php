@@ -4,8 +4,9 @@ $photos->execute(); ?>
 <table>
 	<?php while ($photo = $photos->fetch()): ?>
 		<tr>
-			<td><?= $photo['label'] ?></td>
+			<td><a href=/photos/show.php?id=<?= $photo['id'] ?>><?= $photo['label'] ?></a></td>
 			<td><?= $photo['username'] ?></td>
+			<td>Le <?= strftime('%d-%m-$Y', $photo['date']) ?></td>
 			<td>
 				<?php if (strpos($photo['type'], 'image') !== FALSE): ?>
 					<img src='/photos/getphoto.php?id=<?= $photo['id'] ?>'>

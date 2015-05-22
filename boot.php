@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Africa/Casablanca');
 session_start();
 function sess_get($k) {
 	return isset($_SESSION[$k]) ? $_SESSION[$k] : null;
